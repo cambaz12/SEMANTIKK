@@ -162,6 +162,7 @@ public class Main extends javax.swing.JFrame {
                 System.out.println(" -->"+dopplerarrayst.get(i));
                 dopplerarrayint.add(Integer.parseInt(dopplerarrayst.get(i)));
                 }
+          //analiz çalışması yapılacak
           
         } catch (IOException ex) {
           System.out.println("problem accessing file"+file.getAbsolutePath());
