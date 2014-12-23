@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ihsan.me/ontologies/finaldopplerexample"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://ihsan.me/ontologies/finaldopplerexample">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal datatypeIRI="&xsd;string">ihsan.me</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&xsd;string">0.01</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <Literal datatypeIRI="&xsd;string">IHSAN YIGITBASI</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#ANNE"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BEBEGINDEGERLERI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BEBEK"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BILDIRIMLER"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ABILDIRIMIVAR"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#BBILDIRIMIVAR"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#BEBEGIVAR"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DEGERLERIVAR"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#BAZALBASLAMANOKTASI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#BAZALDEGERFREKANSI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#BAZALDEGERI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#BAZALMINNOKTASI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#BESDKORTALAMAKALPATISSAYISI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CINSIYETI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DOGUMSAYISI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#FETALDEGERI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#HAFTASI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ISMI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#KONSTRAKSIYONBASLANGICI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#KONSTRAKSIYONBITISI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#KONSTRAKSIYONMAXDEGERI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ONDKORTALAMAKALPATISSAYISI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#SEZARYENSAYISI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#A0001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#B0001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BE0001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BI0001"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#ANNE"/>
+        <NamedIndividual IRI="#A0001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BEBEGINDEGERLERI"/>
+        <NamedIndividual IRI="#B0001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BEBEK"/>
+        <NamedIndividual IRI="#BE0001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BILDIRIMLER"/>
+        <NamedIndividual IRI="#BI0001"/>
+    </ClassAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ABILDIRIMIVAR"/>
+        <Class IRI="#ANNE"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#BBILDIRIMIVAR"/>
+        <Class IRI="#BEBEK"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#BEBEGIVAR"/>
+        <Class IRI="#ANNE"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#DEGERLERIVAR"/>
+        <Class IRI="#BEBEK"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ABILDIRIMIVAR"/>
+        <Class IRI="#BILDIRIMLER"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#BBILDIRIMIVAR"/>
+        <Class IRI="#BILDIRIMLER"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#BEBEGIVAR"/>
+        <Class IRI="#BEBEK"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#DEGERLERIVAR"/>
+        <Class IRI="#BEBEGINDEGERLERI"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#BAZALBASLAMANOKTASI"/>
+        <Class IRI="#BEBEGINDEGERLERI"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#BAZALDEGERFREKANSI"/>
+        <Class IRI="#BEBEGINDEGERLERI"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#BAZALDEGERI"/>
+        <Class IRI="#BEBEGINDEGERLERI"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#BAZALMINNOKTASI"/>
+        <Class IRI="#BEBEGINDEGERLERI"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#BESDKORTALAMAKALPATISSAYISI"/>
+        <Class IRI="#BEBEGINDEGERLERI"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#CINSIYETI"/>
+        <Class IRI="#BEBEK"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DOGUMSAYISI"/>
+        <Class IRI="#ANNE"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#FETALDEGERI"/>
+        <Class IRI="#BEBEGINDEGERLERI"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#HAFTASI"/>
+        <Class IRI="#BEBEK"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ISMI"/>
+        <Class IRI="#ANNE"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#KONSTRAKSIYONBASLANGICI"/>
+        <Class IRI="#ANNE"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#KONSTRAKSIYONBITISI"/>
+        <Class IRI="#ANNE"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#KONSTRAKSIYONMAXDEGERI"/>
+        <Class IRI="#ANNE"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ONDKORTALAMAKALPATISSAYISI"/>
+        <Class IRI="#BEBEGINDEGERLERI"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#SEZARYENSAYISI"/>
+        <Class IRI="#ANNE"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#BAZALBASLAMANOKTASI"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#BAZALDEGERFREKANSI"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#BAZALDEGERI"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#BAZALMINNOKTASI"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#BESDKORTALAMAKALPATISSAYISI"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#CINSIYETI"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#DOGUMSAYISI"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#FETALDEGERI"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#HAFTASI"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ISMI"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#KONSTRAKSIYONBASLANGICI"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#KONSTRAKSIYONBITISI"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#KONSTRAKSIYONMAXDEGERI"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ONDKORTALAMAKALPATISSAYISI"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#SEZARYENSAYISI"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
