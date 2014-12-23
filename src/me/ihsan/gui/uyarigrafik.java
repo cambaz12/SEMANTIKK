@@ -6,6 +6,9 @@
 
 package me.ihsan.gui;
 
+
+
+
 /**
  *
  * @author ihsanyigitbasi
@@ -71,7 +74,7 @@ public class uyarigrafik extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addContainerGap(246, Short.MAX_VALUE))
         );
 
         pack();

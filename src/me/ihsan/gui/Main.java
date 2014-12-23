@@ -27,7 +27,7 @@ class MyCustomFilter extends javax.swing.filechooser.FileFilter {
 
 public class Main extends javax.swing.JFrame {
     String dopplerst="";
-    List<Integer> dopplerarrayint=new ArrayList();
+    static List<Integer> dopplerarrayint=new ArrayList();
    
 
 
@@ -84,6 +84,11 @@ public class Main extends javax.swing.JFrame {
         jMenu1.add(Archivee);
 
         jMenuItem5.setText("Çıkış");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem5);
 
         jMenuBar1.add(jMenu1);
@@ -160,10 +165,16 @@ public class Main extends javax.swing.JFrame {
           for(int i=0;i<dopplerarrayst.size();i++)
             {
                 System.out.println(" -->"+dopplerarrayst.get(i));
+                System.out.println(" gecti1");
                 dopplerarrayint.add(Integer.parseInt(dopplerarrayst.get(i)));
+                System.out.println(" gecti2");
                 }
           //analiz çalışması yapılacak
-          
+          System.out.println(" gecti3");
+          graphtry g = new graphtry();
+          System.out.println(" gecti4");
+          g.graphs(dopplerarrayint);
+          System.out.println(" gecti5");
         } catch (IOException ex) {
           System.out.println("problem accessing file"+file.getAbsolutePath());
         }
@@ -189,6 +200,10 @@ public class Main extends javax.swing.JFrame {
        hasta hst = new hasta();
        hst.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
         /**
          * @param args the command line arguments
