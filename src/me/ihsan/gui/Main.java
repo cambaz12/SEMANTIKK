@@ -250,6 +250,10 @@ public class Main extends javax.swing.JFrame {
                         }
                 });
         }
+        public static List getList()
+        {
+            return dopplerarrayint;
+        }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem Archivee;
     private javax.swing.JMenu Hasta;
