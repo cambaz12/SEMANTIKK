@@ -25,7 +25,7 @@ public class CalculateBasalVariability {
 
     private String CalcBasalVar() {
 
-        String BasalVar = "";
+        String BasalVar = "Yok";
 
         for (int i = 0; i < 600; i++) {
 

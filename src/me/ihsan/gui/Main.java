@@ -176,10 +176,8 @@ public class Main extends javax.swing.JFrame {
                 }
           //analiz çalışması yapılacak
           System.out.println(" gecti3");
-          graphtry g = new graphtry();
-          System.out.println(" gecti4");
-          g.graphs(dopplerarrayint);
-          System.out.println(" gecti5");
+          
+          
         } catch (IOException ex) {
           System.out.println("problem accessing file"+file.getAbsolutePath());
         }
