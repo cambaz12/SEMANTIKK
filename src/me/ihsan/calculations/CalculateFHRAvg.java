@@ -19,7 +19,7 @@ public class CalculateFHRAvg {
     private double avg=0.0 ;
      private int beat=0;
      
-     private void clct5min()
+     private double clct5min()
     {
         List<Integer> lst = Main.getList();
         for(int i=0;i<300;i++)
@@ -30,9 +30,10 @@ public class CalculateFHRAvg {
      }
         avg=beat/300;
     setFHR5minAvg(avg);
+    return getFHR5minAvg();
     
     }
-     private void clct10min()
+     private double clct10min()
     {
         List<Integer> lst = Main.getList();
         for(int i=0;i<600;i++)
@@ -43,9 +44,10 @@ public class CalculateFHRAvg {
      }
         avg=beat/600;
     setFHR10minAvg(avg);
+    return getFHR10minAvg();
     
     }
-    private void clct20mins()
+    private double clct20mins()
     {
         List<Integer> lst = Main.getList();
         for(int i=0;i<lst.size();i++)
@@ -55,13 +57,11 @@ public class CalculateFHRAvg {
          
      }
         avg=beat/lst.size();
-    setFHR5minAvg(avg);
+    setFHR20minAvg(avg);
+    return getFHR20minAvg();
     
     }
-    public static void main(String args[]) 
-    {
-        
-    }
+   
 
     /**
      * @return the FHR5minAvg
