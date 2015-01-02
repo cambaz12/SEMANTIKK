@@ -5,6 +5,7 @@
 package me.ihsan.gui;
 
 import java.io.File;
+import me.ihsan.graph.*;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -197,8 +198,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_ArchiveeActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        hastakayit hst = new hastakayit();
-       hst.setVisible(true);
+        Patient p = new Patient();
+        p.setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
@@ -211,8 +212,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        uyarigrafik ug = new uyarigrafik();
-        ug.setVisible(true);
+        graphchart plotChart = new graphchart(dopplerarrayint);
+        plotChart.execute();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
         /**
