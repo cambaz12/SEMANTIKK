@@ -74,31 +74,32 @@ public class ObjectTypePropertyMethods {
         }
     }
     
-    public List getAnObjectProperty(String id, String OTP) {
+     /* public List getAnObjectProperty() {
         List<String> list = new ArrayList<String>();
         try {
             o = m.loadOntologyFromOntologyDocument(localLocation_IRI);
-
             PelletReasoner r = PelletReasonerFactory.getInstance().createReasoner(o);
-            OWLNamedIndividual individual = f.getOWLNamedIndividual(IRI.create(Ont_Base_IRI + "#" + id));
-            OWLObjectProperty op = f.getOWLObjectProperty(IRI.create(Ont_Base_IRI + "#" + OTP));
-            NodeSet<OWLNamedIndividual> set = r.getObjectPropertyValues(individual, op);
+            OWLNamedIndividual individual = f.getOWLNamedIndividual(IRI.create(Ont_Base_IRI + "#00002"));
+            OWLObjectProperty op = f.getOWLObjectProperty(IRI.create(Ont_Base_IRI + "#Next_Material"));
+            NodeSet<OWLNamedIndividual> value = r.getObjectPropertyValues(individual, op);
 
-            for (OWLNamedIndividual each : set.getFlattened()) {
-                String str = each.toString();
-                //str = StringRemoval(str); //Remove str IRI prefix
-                if (str != null) {
-                    list.add(str);
-                }
+            for (OWLNamedIndividual rangeVal : value.getFlattened()) {
+                System.out.println(labelFor(individual, o) + "--> "
+                        + labelFor(op, o) + "-->\n" + labelFor(rangeVal, o));
+
+                // add to list
+
+                list.add(labelFor(individual, o) + "--> "
+                        + labelFor(op, o) + "-->" + labelFor(rangeVal, o).toString());
             }
 
             m.removeOntology(o);
         } catch (Exception e) {
             System.out.println("Could not create ontology: " + e.getMessage());
         }
-        System.out.println(list);
+
         return list;
-    }
+    } */
      public String StringRemoval(String str) {
         str = str.substring(str.indexOf('#') + 1, str.length() - 1);
         return str;

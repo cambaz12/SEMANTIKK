@@ -25,7 +25,7 @@ public class CalculateAcceleration {
     int accelcounter=0;
     double baseline=0;
     int peakvalueInd=0;
-    String accel="";
+    String accel="no";
     
     public String calculateacc() {
          Patient u = new Patient();
