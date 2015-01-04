@@ -20,18 +20,22 @@ public class CalculateBaseline {
     double avg=0.0;
     int bigvalues=0;        
     
-   private double getbaselinevalue()
+   public double getbaselinevalue()
    {
+               int counter=0;
+
        for(int i=0;i<600;i++)
        {
            if(1<=i && lst.get(i)-lst.get(i-1)==5)
            {
+                               counter++;
+
                dopplerlst.add(lst.get(i));
                bigvalues=bigvalues+lst.get(i);
                
             }
        }
-       avg=bigvalues/dopplerlst.size();
+       avg=(double)bigvalues/counter;
        return avg;
        
    }

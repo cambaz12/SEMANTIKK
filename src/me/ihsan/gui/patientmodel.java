@@ -13,9 +13,9 @@ package me.ihsan.gui;
 public class patientmodel {
     private String name ; 
     private int numberofbirth;
-    private int cesarean;
     private String gender;
     private int week;
+    private String uterus;
 
     /**
      * @return the name
@@ -48,16 +48,7 @@ public class patientmodel {
     /**
      * @return the cesarean
      */
-    public int getCesarean() {
-        return cesarean;
-    }
-
-    /**
-     * @param cesarean the cesarean to set
-     */
-    public void setCesarean(int cesarean) {
-        this.cesarean = cesarean;
-    }
+    
 
     /**
      * @return the gender
@@ -85,6 +76,20 @@ public class patientmodel {
      */
     public void setWeek(int week) {
         this.week = week;
+    }
+
+    /**
+     * @return the uterus
+     */
+    public String getUterus() {
+        return uterus;
+    }
+
+    /**
+     * @param uterus the uterus to set
+     */
+    public void setUterus(String uterus) {
+        this.uterus = uterus;
     }
     
     

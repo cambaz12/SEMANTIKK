@@ -4,6 +4,8 @@
  */
 package me.ihsan.gui;
 
+
+import me.ihsan.*;
 import java.io.File;
 import me.ihsan.graph.*;
 import java.io.FileReader;
@@ -13,6 +15,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import javax.swing.JFileChooser;
+import me.ihsan.protege.SavePropertiesToOwl;
 
 
 class MyCustomFilter extends javax.swing.filechooser.FileFilter {
@@ -177,7 +180,8 @@ public class Main extends javax.swing.JFrame {
                 }
           //analiz çalışması yapılacak
           System.out.println(" gecti3");
-          
+           SavePropertiesToOwl so = new SavePropertiesToOwl();
+           
           
         } catch (IOException ex) {
           System.out.println("problem accessing file"+file.getAbsolutePath());
@@ -185,6 +189,7 @@ public class Main extends javax.swing.JFrame {
     } else {
         System.out.println("File access cancelled by user.");
     
+        
 } 
         }//GEN-LAST:event_OpenActionPerformed
 

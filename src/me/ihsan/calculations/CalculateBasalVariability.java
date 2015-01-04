@@ -23,7 +23,7 @@ public class CalculateBasalVariability {
     int Nmax = 0;
     int NmaxIndex = 0;
 
-    private String CalcBasalVar() {
+    public String CalcBasalVar() {
 
         String BasalVar = "Yok";
 
@@ -60,23 +60,23 @@ public class CalculateBasalVariability {
             BasalVar = "Minimal";
         }
 
-        if ((min10List.get(maxIndex) - min10List.get(maxIndex - 1)) > 6 && (min10List.get(maxIndex) - min10List.get(maxIndex - 1)) < 25) {
+        else if ((min10List.get(maxIndex) - min10List.get(maxIndex - 1)) > 6 && (min10List.get(maxIndex) - min10List.get(maxIndex - 1)) < 25) {
             BasalVar = "Orta";
         }
 
-        if ((min10List.get(maxIndex) - min10List.get(maxIndex - 1)) > 25) {
+        else if ((min10List.get(maxIndex) - min10List.get(maxIndex - 1)) > 25) {
             BasalVar = "Belirgin";
         }
 
-        if ((next10List.get(NmaxIndex) - next10List.get(NmaxIndex - 1)) < 5) {
+        else if ((next10List.get(NmaxIndex) - next10List.get(NmaxIndex - 1)) < 5) {
             BasalVar = "Minimal";
         }
 
-        if ((next10List.get(NmaxIndex) - next10List.get(NmaxIndex - 1)) > 6 && (next10List.get(NmaxIndex) - next10List.get(NmaxIndex - 1)) < 25) {
+        else if ((next10List.get(NmaxIndex) - next10List.get(NmaxIndex - 1)) > 6 && (next10List.get(NmaxIndex) - next10List.get(NmaxIndex - 1)) < 25) {
             BasalVar = "Orta";
         }
 
-        if ((next10List.get(NmaxIndex) - next10List.get(NmaxIndex - 1)) > 25) {
+        else if ((next10List.get(NmaxIndex) - next10List.get(NmaxIndex - 1)) > 25) {
             BasalVar = "Belirgin";
         }
 

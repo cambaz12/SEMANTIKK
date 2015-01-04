@@ -6,12 +6,17 @@
 
 package me.ihsan.gui;
 
+import javax.swing.JOptionPane;
+import me.ihsan.*;
+import me.ihsan.protege.DataPropertyMethods;
+
 /**
  *
  * @author ihsanyigitbasi
  */
 public class Patient extends javax.swing.JFrame {
 
+    public static int week;
     /**
      * Creates new form Patient
      */
@@ -32,16 +37,16 @@ public class Patient extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jCheckBox1 = new javax.swing.JCheckBox();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox();
         jLabel7 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,15 +55,6 @@ public class Patient extends javax.swing.JFrame {
         jLabel2.setText("Hasta Ismi : ");
 
         jLabel3.setText("Doğum Sayisi :");
-
-        jLabel4.setText("Sezaryen mı ? ");
-
-        jCheckBox1.setText("Evet");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
 
         jLabel5.setText("Bebeğin Değerleri : ");
 
@@ -75,10 +71,18 @@ public class Patient extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setText("Uterus Kasılması var mı ? ");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Var ", "Yok", " " }));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(73, 73, 73))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -91,14 +95,11 @@ public class Patient extends javax.swing.JFrame {
                                 .addComponent(jLabel2))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel3))))
+                                .addComponent(jLabel3)))
                         .addGap(40, 40, 40)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1)
-                            .addComponent(jTextField2)
-                            .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)))
+                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
+                            .addComponent(jTextField2)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(jLabel5))
@@ -110,12 +111,13 @@ public class Patient extends javax.swing.JFrame {
                         .addGap(38, 38, 38)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField3))))
+                            .addComponent(jTextField3)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(16, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(73, 73, 73))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -133,7 +135,7 @@ public class Patient extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jCheckBox1))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(67, 67, 67)
                 .addComponent(jLabel5)
                 .addGap(35, 35, 35)
@@ -144,7 +146,7 @@ public class Patient extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(43, 43, 43))
         );
@@ -163,22 +165,24 @@ public class Patient extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         patientmodel pm = new patientmodel();
         pm.setName(jTextField1.getText());
         pm.setNumberofbirth(Integer.parseInt(jTextField2.getText()));
         pm.setWeek(Integer.parseInt(jTextField3.getText()));
         pm.setGender(jComboBox2.getSelectedItem().toString());
-        if (jCheckBox1.isSelected()) {
-            pm.setCesarean(1);
-        }else
-        {
-            pm.setCesarean(0);
-        }
+        pm.setUterus(jComboBox1.getSelectedItem().toString());
+        
+       DataPropertyMethods dp1 = new DataPropertyMethods();
+       dp1.SaveDTPString("PT0001","hasName", pm.getName());
+       dp1.SaveDTPInteger("PT0001", "hasNumberofPregnancy", pm.getNumberofbirth());
+       dp1.SaveDTPInteger("F0001", "hasWeek", pm.getWeek());
+       dp1.SaveDTPString("F0001", "hasGender", pm.getGender());
+       dp1.SaveDTPString("PT0001", "hasContraction", pm.getUterus());
+       
+       JOptionPane.showMessageDialog(null, "Hasta Bilgileri Sisteme Eklendi");
+       
+       week = pm.getWeek();
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -219,7 +223,7 @@ public class Patient extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
