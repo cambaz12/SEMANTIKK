@@ -235,15 +235,20 @@
         <Class IRI="#DECELERATION"/>
         <NamedIndividual IRI="#VARIABLE_DECELERATION"/>
     </ClassAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasGender"/>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHeartValues"/>
         <NamedIndividual IRI="#F0001"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Erkek</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasWeek"/>
+        <NamedIndividual IRI="#FH0001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPatern"/>
         <NamedIndividual IRI="#F0001"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18</Literal>
+        <NamedIndividual IRI="#BRADYCARDIA"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#FETALDEGERI"/>
+        <NamedIndividual IRI="#B0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1.3</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasAverageHeartBeat"/>
@@ -269,21 +274,6 @@
         <DataProperty IRI="#hasBazalVariability"/>
         <NamedIndividual IRI="#FH0001"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Belirgin</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasContraction"/>
-        <NamedIndividual IRI="#PT0001"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Var </Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#PT0001"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">FURKAN ULUAY</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasNumberofPregnancy"/>
-        <NamedIndividual IRI="#PT0001"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">123</Literal>
     </DataPropertyAssertion>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasContractions"/>

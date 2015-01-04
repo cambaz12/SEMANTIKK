@@ -5,9 +5,8 @@
 package me.ihsan.gui;
 
 
-import me.ihsan.*;
+import java.awt.BorderLayout;
 import java.io.File;
-import me.ihsan.graph.*;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,6 +14,11 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import me.ihsan.*;
+import me.ihsan.graph.*;
+import me.ihsan.protege.ObjectTypePropertyMethods;
 import me.ihsan.protege.SavePropertiesToOwl;
 
 
@@ -50,14 +54,12 @@ public class Main extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         Open = new javax.swing.JMenuItem();
-        Archivee = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         Hasta = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
 
         fileChooser.setDialogTitle("This is my open dialog");
         fileChooser.setFileFilter(new MyCustomFilter());
@@ -78,14 +80,6 @@ public class Main extends javax.swing.JFrame {
             }
         });
         jMenu1.add(Open);
-
-        Archivee.setText("Arşivle");
-        Archivee.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ArchiveeActionPerformed(evt);
-            }
-        });
-        jMenu1.add(Archivee);
 
         jMenuItem5.setText("Çıkış");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
@@ -126,14 +120,6 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Hasta.add(jMenuItem3);
-
-        jMenuItem4.setText("Hasta Bilgilerini Düzenle");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
-            }
-        });
-        Hasta.add(jMenuItem4);
 
         jMenuBar1.add(Hasta);
 
@@ -194,23 +180,26 @@ public class Main extends javax.swing.JFrame {
         }//GEN-LAST:event_OpenActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-                        uyarigrafik ug = new uyarigrafik();
-                    ug.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+                    ObjectTypePropertyMethods objectProperty=new ObjectTypePropertyMethods();
+        List<String> list=objectProperty.getAnObjectProperty("F0001", "hasPatern");
+        
 
-    private void ArchiveeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ArchiveeActionPerformed
-            
-    }//GEN-LAST:event_ArchiveeActionPerformed
+                String content1="<html><body ><h3>Warning</h3>";
+                String content2="Fetus may have <br>";
+                for(int i=0;i<list.size();i++)
+                {
+                    content2=content2+ " "+list.get(i)+"<br>";
+                }
+                JPanel p = new JPanel( new BorderLayout() );
+                String content = content1+content2+ "";
+
+                JOptionPane.showMessageDialog(null, content);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         Patient p = new Patient();
         p.setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
-
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-       hastakayit hst = new hastakayit();
-       hst.setVisible(true);
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         System.exit(0);
@@ -259,7 +248,6 @@ public class Main extends javax.swing.JFrame {
             return dopplerarrayint;
         }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem Archivee;
     private javax.swing.JMenu Hasta;
     private javax.swing.JMenuItem Open;
     private javax.swing.JFileChooser fileChooser;
@@ -269,7 +257,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea textarea;

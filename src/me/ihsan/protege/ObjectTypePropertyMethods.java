@@ -100,6 +100,35 @@ public class ObjectTypePropertyMethods {
 
         return list;
     } */
+    public List getAnObjectProperty(String id, String OTP) {
+        List<String> list = new ArrayList<String>();
+        try {
+            o = m.loadOntologyFromOntologyDocument(localLocation_IRI);
+
+            PelletReasoner r = PelletReasonerFactory.getInstance().createReasoner(o);
+            OWLNamedIndividual individual = f.getOWLNamedIndividual(IRI.create(Ont_Base_IRI + "#" + id));
+            OWLObjectProperty op = f.getOWLObjectProperty(IRI.create(Ont_Base_IRI + "#" + OTP));
+            NodeSet<OWLNamedIndividual> set = r.getObjectPropertyValues(individual, op);
+
+            for (OWLNamedIndividual each : set.getFlattened()) {
+                String str = each.toString();
+                String[] str1=null; 
+                String newstring="";
+                //str = StringRemoval(str); //Remove str IRI prefix
+                if (str != null) {
+                    str1=str.split("#");
+                    newstring=str1[1].substring(0, str1[1].length()-1);
+                    list.add(newstring);
+                }
+            }
+
+            m.removeOntology(o);
+        } catch (Exception e) {
+            System.out.println("Could not create ontology: " + e.getMessage());
+        }
+        System.out.println(list);
+        return list;
+    }
      public String StringRemoval(String str) {
         str = str.substring(str.indexOf('#') + 1, str.length() - 1);
         return str;
