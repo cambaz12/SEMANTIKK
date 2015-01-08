@@ -56,8 +56,8 @@ public class Main extends javax.swing.JFrame {
         Open = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         Hasta = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
 
@@ -93,14 +93,6 @@ public class Main extends javax.swing.JFrame {
 
         jMenu2.setText("Görüntüle");
 
-        jMenuItem1.setText("Uyarıları Görüntüle");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem1);
-
         jMenuItem2.setText("Grafikleri Görüntüle");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +100,14 @@ public class Main extends javax.swing.JFrame {
             }
         });
         jMenu2.add(jMenuItem2);
+
+        jMenuItem1.setText("Uyarıları Görüntüle");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem1);
 
         jMenuBar1.add(jMenu2);
 
@@ -179,23 +179,6 @@ public class Main extends javax.swing.JFrame {
 } 
         }//GEN-LAST:event_OpenActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-                    ObjectTypePropertyMethods objectProperty=new ObjectTypePropertyMethods();
-        List<String> list=objectProperty.getAnObjectProperty("F0001", "hasPatern");
-        
-
-                String content1="<html><body ><h3>Warning</h3>";
-                String content2="Fetus may have <br>";
-                for(int i=0;i<list.size();i++)
-                {
-                    content2=content2+ " "+list.get(i)+"<br>";
-                }
-                JPanel p = new JPanel( new BorderLayout() );
-                String content = content1+content2+ "";
-
-                JOptionPane.showMessageDialog(null, content);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         Patient p = new Patient();
         p.setVisible(true);
@@ -209,6 +192,24 @@ public class Main extends javax.swing.JFrame {
         graphchart plotChart = new graphchart(dopplerarrayint);
         plotChart.execute();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+       ObjectTypePropertyMethods objectProperty=new ObjectTypePropertyMethods();
+        List<String> list=objectProperty.getAnObjectProperty("F0001", "hasPatern");
+        
+
+                String content1="<html><body ><h3>Warning</h3>";
+                String content2="Fetus may have <br>";
+                for(int i=0;i<list.size();i++)
+                {
+                    content2=content2+ " "+list.get(i)+"<br>";
+                }
+                JPanel p = new JPanel( new BorderLayout() );
+                String content = content1+content2+ "";
+
+                JOptionPane.showMessageDialog(null, content); 
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
         /**
          * @param args the command line arguments

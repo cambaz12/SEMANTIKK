@@ -235,45 +235,55 @@
         <Class IRI="#DECELERATION"/>
         <NamedIndividual IRI="#VARIABLE_DECELERATION"/>
     </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasHeartValues"/>
-        <NamedIndividual IRI="#F0001"/>
-        <NamedIndividual IRI="#FH0001"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPatern"/>
-        <NamedIndividual IRI="#F0001"/>
-        <NamedIndividual IRI="#BRADYCARDIA"/>
-    </ObjectPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#FETALDEGERI"/>
-        <NamedIndividual IRI="#B0001"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1.3</Literal>
+        <DataProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="#F0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Erkek</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasWeek"/>
+        <NamedIndividual IRI="#F0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">33</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasAverageHeartBeat"/>
         <NamedIndividual IRI="#FH0001"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">245.0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">187.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasAverageHeartBeatper10Min"/>
         <NamedIndividual IRI="#FH0001"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">208.0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">159.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasAverageHeartBeatper5Min"/>
         <NamedIndividual IRI="#FH0001"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">138.0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">103.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasBazalRate"/>
         <NamedIndividual IRI="#FH0001"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">141.3846153846154</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">138.5</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasBazalVariability"/>
         <NamedIndividual IRI="#FH0001"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Belirgin</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasContraction"/>
+        <NamedIndividual IRI="#PT0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Var </Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#PT0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">at</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberofPregnancy"/>
+        <NamedIndividual IRI="#PT0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
     </DataPropertyAssertion>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasContractions"/>
