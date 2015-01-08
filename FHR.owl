@@ -246,9 +246,19 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">33</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasWeek"/>
+        <NamedIndividual IRI="#F0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasAverageHeartBeat"/>
         <NamedIndividual IRI="#FH0001"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">187.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAverageHeartBeat"/>
+        <NamedIndividual IRI="#FH0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">245.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasAverageHeartBeatper10Min"/>
@@ -256,9 +266,24 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">159.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasAverageHeartBeatper10Min"/>
+        <NamedIndividual IRI="#FH0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">208.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAverageHeartBeatper5Min"/>
+        <NamedIndividual IRI="#FH0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">138.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasAverageHeartBeatper5Min"/>
         <NamedIndividual IRI="#FH0001"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">103.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBazalRate"/>
+        <NamedIndividual IRI="#FH0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">141.3846153846154</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasBazalRate"/>
@@ -279,6 +304,11 @@
         <DataProperty IRI="#hasName"/>
         <NamedIndividual IRI="#PT0001"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">at</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNumberofPregnancy"/>
+        <NamedIndividual IRI="#PT0001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">33</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasNumberofPregnancy"/>
